@@ -18,7 +18,8 @@ Litter in remote reserves like George Everest Peak needs efficient cleanup. Inac
 Marutsakha is a unmanned ariel drone integrated with a trained ML model that can detect garbage. Marutsakha is equipped with sensors including gps and a camera. Our idea is to set a path of the drone in inacessible areas where manual reach is fuel consuming. This UAV would stream video and detect the garbage locations in path and based on drone's current position would generate a geoheatmap that can be helpful to easily map out the garbage accumulations.
 ### Live Demo
 https://youtu.be/jVCeZkKO8pw?si=y_RV4_JGUtL8gyAI
-
+### Postman Workspace Link
+https://www.postman.com/flight-architect-91203947/workspace/my-workspace/request/30169315-c8cd25de-d7cc-47e8-a51a-eec8dd8329bc
 ### ScreenShots
 ![](screenshots/IMG20230930181352.jpg)
 <!-- ![](screenshots/IMG20230930181352.jpg) -->
