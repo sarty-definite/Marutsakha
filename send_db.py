@@ -12,13 +12,9 @@ headers = {
 }
 
 master = mavutil.mavlink_connection('udp:localhost:14445')
-while True:
-    msg = master.recv_msg()
-    if msg is not None and msg.get_type()=="GPS_RAW_INT":
-        print(msg.lat)
-        print(msg.lon)
-        
-        payload = json.dumps({
+msg = master.recv_msg()
+if msg is not None and msg.get_type()=="GPS_RAW_INT":
+  payload = json.dumps({
             "collection": "Trashtrack",
             "database": "Trashtrack",
             "dataSource": "Cluster0",
@@ -27,8 +23,7 @@ while True:
         "long":msg.lon,
         "time":datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
             }
-        })
-
-        response = requests.request("POST", url, headers=headers, data=payload)
+    })
+  response = requests.request("POST", url, headers=headers, data=payload)
 
         # print(response.text)
